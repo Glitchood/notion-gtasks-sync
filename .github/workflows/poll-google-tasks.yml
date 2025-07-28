@@ -1,0 +1,22 @@
+# .github/workflows/poll-google-tasks.yml
+name: Poll Google Tasks
+
+on:
+  repository_dispatch:
+    types: [poll-trigger] # This is a new trigger type
+
+jobs:
+  run-polling-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      
+      # We'll pretend 'real_poll.py' is our actual script
+      - name: Run Google Tasks Polling Script
+        run: echo "Pretending to poll Google Tasks now..." # python real_poll.py
