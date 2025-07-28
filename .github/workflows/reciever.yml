@@ -26,4 +26,4 @@ jobs:
         # The GITHUB_EVENT_PATH is automatically available in this context
         env:
           GITHUB_EVENT_PATH: ${{ github.event_path }}
-        run: python test_script.py
+        run: python main.py
