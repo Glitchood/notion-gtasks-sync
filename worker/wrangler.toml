@@ -1,0 +1,13 @@
+name = "notion-bridge"
+main = "src/worker.js"
+workers_dev = true
+compatibility_date = "2025-07-28"
+
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+  [observability.logs]
+  enabled = true
+  head_sampling_rate = 1
+  invocation_logs = true
